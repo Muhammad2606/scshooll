@@ -1,0 +1,33 @@
+@media only screen and (max-width: 768px) {
+  @mixin gridres() {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .header .navigation .navbar .navbar__nav a {
+    display: none;
+  }
+  .header {
+    height: 100%;
+  }
+  .header .navigation {
+    width: 100%;
+  }
+  .header .navigation .navbar {
+    justify-content: space-between;
+  }
+  .header .banner h1 {
+    font-size: 3rem;
+  }
+  .header .banner {
+    margin-top: 10%;
+    width: 50%;
+    margin-left: 0%;
+    font-family: var(--lora);
+    padding-bottom: 1rem;
+  }
+  .about__content, .circle__content, .why__content, .blog__content, .what__content, .footer__content {
+    @include gridres();
+}
+}
